@@ -36,12 +36,16 @@ module.exports.config = {
     description: "Turn yourself into an anime character!",
     commandCategory: "Image",
     usePrefix: true,
-    usages: "animirror [modelNumber]\nexample: animirror 2\n\nHere are the available models:\n" + Object.entries(models).map(([number, name]) => `❏ ${number} : ${name}`).join("\n"),
+    usages: "{prefix}animirror [modelNumber]\nexample: {prefix}animirror 2",
     cooldowns: 0,
 };
 
 module.exports.run = async function ({ api, event, args }) {
     try {
+      if (args[0] === "list") {
+            const modelList = Object.entries(models).map(([number, name]) => `❏ ${number} : ${name}`).join("\n");
+            return api.sendMessage({ body: "Here are the available models:\n" + modelList }, event.threadID);
+      }
         const [modelNumber] = args;
 
         if (!modelNumber || isNaN(modelNumber) || !models[modelNumber]) {
@@ -69,13 +73,22 @@ module.exports.run = async function ({ api, event, args }) {
 
         const { data: imageBuffer } = await axios.get(generatedImageUrl, { responseType: "arraybuffer" });
 
-        const attachmentData = Buffer.from(imageBuffer, 'binary');
+        const temporaryImagePath = `temp_${Date.now()}.jpg`;
+        fs.writeFileSync(temporaryImagePath, Buffer.from(imageBuffer, 'binary'));
+
+        const attachmentData = fs.createReadStream(temporaryImagePath);
 
         await api.sendMessage({
             body: `Anime Art applied ✨\nModel used: ${modelNumber} (${models[modelNumber]})`,
             attachment: attachmentData,
         }, event.threadID);
-        
+
+        api.sendMessage({
+            body: "✅",
+            attachment: null,
+        }, event.messageID);
+
+        await unlinkAsync(temporaryImagePath);
         api.unsendMessage(processingMessage.messageID);
 
     } catch (error) {

@@ -44,10 +44,14 @@ module.exports = {
 
   onStart: async function ({ api, args, message, event }) {
     try {
+      if (args[0] === "list") {
+            const modelList = Object.entries(models).map(([number, name]) => `❏ ${number} : ${name}`).join("\n");
+            return message.reply("Here are the available models:\n" + modelList);
+      }
       const [modelNumber] = args;
 
       if (!modelNumber || isNaN(modelNumber) || !models[modelNumber]) {
-        return message.reply("Invalid model number. Please provide a valid model number from the list.");
+        return message.reply("Invalid model number. Please provide a valid model number from the list.\n\ntype: /animirror list\nto see the list of all available mosel");
       }
 
       if (!(event.type === "message_reply" && event.messageReply.attachments && event.messageReply.attachments.length > 0 && ["photo", "sticker"].includes(event.messageReply.attachments[0].type))) {
