@@ -43,7 +43,7 @@ module.exports = {
 
       const ramadanInfo = "🌙 Ramadan Timings 🕌\n" +
         "❏ City: " + city + "\n" +
-        "❏ Date: " + localTime + "\n" +
+        "❏ Date: " + today.date + "\n" +
         "❏ Current Time: " + localTime + "\n\n" +
         "Today's:\n" +
         "❏ Sahr: " + today.sahr + "\n" +
