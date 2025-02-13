@@ -67,7 +67,7 @@ module.exports.run = async function ({ api, event, args }) {
             body: `Applying the Filter, please wait...\nModel using: ${modelNumber} (${models[modelNumber]}) ⌛`,
         }, event.threadID);
 
-        const response = await axios.get(`https://simoapi-aimirror.onrender.com/generate?imageUrl=${encodedImageUrl}&modelNumber=${modelNumber}`);
+        const response = await axios.get(`https://simo-aiart.onrender.com/generate?imageUrl=${encodedImageUrl}&modelNumber=${modelNumber}`);
 
         const generatedImageUrl = response.data.imageUrl;
 
