@@ -63,7 +63,7 @@ module.exports = {
 
       const processingMessage = message.reply(`Applying the Filter, please wait...\nModel using: ${modelNumber} (${models[modelNumber]}) ⌛`);
 
-      const response = await axios.get(`https://simoapi-aimirror.onrender.com/generate?imageUrl=${encodedImageUrl}&modelNumber=${modelNumber}`);
+      const response = await axios.get(`https://simo-aiart.onrender.com/generate?imageUrl=${encodedImageUrl}&modelNumber=${modelNumber}`);
 
       const { imageUrl: generatedImageUrl } = response.data;
       const Stream = await getStreamFromURL(generatedImageUrl);
