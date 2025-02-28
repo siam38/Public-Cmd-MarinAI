@@ -21,11 +21,11 @@ module.exports = {
         return;
       }
 
-      const botName = 'Your bot Name'; // add your bot name to show it in canvas image';
+      const botName = 'YourBot'; // add your bot name to show it in canvas image';
 
       const cityName = args.join(" ");
       message.reaction("⏰", event.messageID);
-      const apiUrl = `https://connect-simoai.onrender.com/tools/ramadan?city=${encodeURIComponent(cityName)}&botName=${encodeURIComponent(botName)}`;
+      const apiUrl = `https://connect-foxapi.onrender.com/tools/ramadan?city=${encodeURIComponent(cityName)}&botName=${encodeURIComponent(botName)}`;
       const response = await axios.get(apiUrl);
 
       if (!response.data.city) {
@@ -35,6 +35,7 @@ module.exports = {
 
       const {
         city,
+        hijriDate,
         localTime,
         today,
         tomorrow,
@@ -44,6 +45,7 @@ module.exports = {
       const ramadanInfo = "🌙 Ramadan Timings 🕌\n" +
         "❏ City: " + city + "\n" +
         "❏ Date: " + today.date + "\n" +
+        "❏ Hijri Date: " + hijriDate + "\n" +
         "❏ Current Time: " + localTime + "\n\n" +
         "Today's:\n" +
         "❏ Sahr: " + today.sahr + "\n" +
@@ -66,7 +68,7 @@ module.exports = {
 
     } catch (error) {
       console.error(error);
-      message.reply("Error fetching Ramadan timings.");
+      message.reply("Error or City not found. Please check the spelling and try again.");
     }
   }
 };
