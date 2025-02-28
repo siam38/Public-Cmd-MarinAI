@@ -68,7 +68,7 @@ module.exports = {
 
     } catch (error) {
       console.error(error);
-      message.reply("Error or City not found. Please check the spelling and try again.");
+      message.reply("City not found. Please check the spelling [don't use Direct 'country' name, use your city or state name ]");
     }
   }
 };
