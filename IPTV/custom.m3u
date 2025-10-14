@@ -1,4 +1,10 @@
 #EXTM3U
+# ===== temp ====
+#EXTINF:-1 tvg-id="rthk32.hk" tvg-name="RTHK TV 32" group-title="Hong Kong" tvg-logo="https://upload.wikimedia.org/wikipedia/en/2/2b/RTHK_TV_32_Logo.png",RTHK TV 32
+#EXTVLCOPT:http-header="X-Forwarded-For: 182.239.127.137"
+https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream4/streamPlaylist.m3u8
+
+
 #EXTINF:-1 group-title="Bangla" tvg-id="enter10bangla.in" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Enter%2010%20Bangla.jpeg",Enter10 Bangla HD
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_480p/chunks.m3u8
 
@@ -25,3 +31,5 @@ https://stream.himelop-pro.top/st/dpny.php?id=4677
 
 #EXTINF:-1 group-title="Star By MaxLIV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/STAR_Movies_logo.svg/800px-STAR_Movies_logo.svg.png",Star Movies HD
 https://stream.himelop-pro.top/st/dpny.php?id=5488
+
+
