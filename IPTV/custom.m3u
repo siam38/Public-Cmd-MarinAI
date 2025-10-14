@@ -1,9 +1,8 @@
 #EXTM3U
 # ===== temp ====
-#EXTINF:-1 tvg-id="rthk32.hk" tvg-name="RTHK TV 32" group-title="Hong Kong" tvg-logo="https://upload.wikimedia.org/wikipedia/en/2/2b/RTHK_TV_32_Logo.png",RTHK TV 32
-#EXTVLCOPT:http-header="X-Forwarded-For: 182.239.127.137"
-https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/stream4/streamPlaylist.m3u8
-
+#EXTINF:-1 tvg-id="afc.bd" tvg-name="TV1" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/AFC_Asian_Cup_logo.svg/512px-AFC_Asian_Cup_logo.svg.png",TV1
+#EXTVLCOPT:http-user-agent=iPhone
+https://live.bongobd.com/hls/BHgeKWYCjJK4KnUYbwqzwA/1760446041/afc_asian_cup.m3u8
 
 #EXTINF:-1 group-title="Bangla" tvg-id="enter10bangla.in" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Enter%2010%20Bangla.jpeg",Enter10 Bangla HD
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_480p/chunks.m3u8
