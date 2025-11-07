@@ -1,7 +1,6 @@
 #EXTM3U
 # ===== temp ====
 #EXTINF:-1 tvg-id="afc.bd" tvg-name="TV1" group-title="Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/AFC_Asian_Cup_logo.svg/512px-AFC_Asian_Cup_logo.svg.png",TV1
-#EXTVLCOPT:http-user-agent=iPhone
 https://drive.usercontent.google.com/download?id=1VkgnCokzW7RhBb0OpqCeVhxO6ZKORYoy&export=download&confirm=t&uuid=58dde966-2700-4657-aaa3-c6b5d3bc0f3d
 
 #EXTINF:-1 group-title="Bangla" tvg-id="enter10bangla.in" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Enter%2010%20Bangla.jpeg",Enter10 Bangla HD
