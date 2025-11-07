@@ -1,7 +1,8 @@
 #EXTM3U
-# ===== temp ====
+# ===== temp ===
 #EXTINF:-1 group-title="customStreaming" tvg-id="customStreaming" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/8/8e/Somoy_Television.svg",customStreaming
-http://172.16.50.7/DHAKA-FLIX-7/English%20Movies/%282010%29/The%20Karate%20Kid%20%282010%29%20720p%20%5BDual%20Audio%5D/The%20Karate%20Kid%20%282010%29%20720p%20BluRay%20x264%20MSubs%20%5BDual%20Audio%5D%5BHindi%205.1%2BEnglish%205.1%5D%20-mkvA.mkv
+#EXTVLCOPT:http-cookie=Edge-Cache-Cookie=urlprefix=aHR0cHM6Ly9zYmNkbi5oYWt1bmF5bWF0YXRhLmNvbS9kYXNoLzczNzg0NDQwOTA0NzgxMzQ5ODRfMF8wXzEwODBfaDI2NV8yNTcv:sign=dc68aad62d0d777fe7009f0d4e640533:t=1762504583
+https://sbcdn.hakunaymatata.com/dash/7378444090478134984_0_0_1080_h265_257/index.mpd
 
 
 #EXTINF:-1 group-title="Bangla" tvg-id="enter10bangla.in" tvg-logo="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Enter%2010%20Bangla.jpeg",Enter10 Bangla HD
